@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+	*{margin: 0; padding: 0;}
+	body{
+			width: 960px; height: auto;
+			margin: 0 auto;
+			background-color: black;
+			
+		font-style: "NanumGothic", "Malgun Gothic", "Apple SD Neo Gothic", "AppleGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	.background{
+		width: 960px; height: 1500px;
+
+		background: url(인터스텔라_수정2.jpg);
+		background-repeat: no-repeat;
+		background-size: 960px;
+	}
+		@font-face {
+	font-family: Futura BT;
+	src: url("ENFUTUBK.eot");
+	src: local("FuturaBlack BT"), url("ENFUTUBK.woff") format("woff");
+
+	}
+	.title{
+		 padding: 150px 200px 50px 70px;
+	}
+	.img-margin{
+		margin-right: 50px;
+	}
+	video{
+		margin-left: 80px;
+	}
+	</style>
+</head>
+<body>
+	<div class="background">
+		<table class="title">
+			<tbody>
+			<tr>
+				<td><a href="index.html"><img src="back.png" class="img-margin" width="30"></a></td>
+				<td><img src="teaser.png"></td>
+			</tr>
+			</tbody>
+		</table>
+		<video controls="controls" width="800" height="500" class="mv">
+			<source src="photo/teaser.mp4" type"video/mp4"/>
+		</video>
+		<video controls="controls" width="800" height="500" class="mv">
+			<source src="photo/teaser2.mp4" type"video/mp4"/>
+		</video>
+	</div>
+</body>
+</html>

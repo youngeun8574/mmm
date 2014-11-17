@@ -179,11 +179,45 @@
 	}
             } 
            
-
+          
 
 	
 	
 	</style>
+	<script>
+var ie=document.all?1:0
+var ns6=document.getElementById&&!document.all?1:0
+var ns4=document.layers?1:0
+var posleft=1
+var idoftrembleobject="trembletext"
+var trembleobject
+
+function starttremble() {
+    if (ie || ns4 || ns6) {
+        if (ie) {
+            trembleobject=eval("document.all."+idoftrembleobject+".style")
+        }
+        if (ns6) {
+            trembleobject=idoftrembleobject
+        }
+        
+            dotremble()
+    }
+}
+
+function dotremble() {
+    posleft*=-1
+    if (ie) {
+            trembleobject.posLeft+=posleft  
+    }
+    if (ns6) {
+            var newpos=parseInt(document.getElementById(trembleobject).style.left)+posleft
+        document.getElementById(trembleobject).style.left=newpos
+    }
+    var timer=setTimeout("dotremble()",20) // 숫자 20 을 조절해 보세요. 숫자가 커질수록 속도가 느려집니다
+}
+onload=starttremble
+</script>
 </head>
 <body>
 	<div class="background">
@@ -210,9 +244,9 @@
 		<table class="table-sub">
 			<tbody>
 				<tr>
-					<td class="td"><a href="4part.html">Director</a></td>
-					<td class="td"><a href="1part.html">Actor</a></td>
-					<td class="td"><a href="2part.html">Story</a></td>
+					<td class="td" id="box" style="position:relative"><a href="4part.html">Director</a></td>
+					<td class="td" id="box" style="position:relative"><a href="1part.html">Actor</a></td>
+					<td class="td" id="box" style="position:relative"><a href="2part.html">Story</a></td>
 				</tr>
 			</tbody>
 		</table>

@@ -64,6 +64,25 @@
 		box-shadow: 1px 1px 7px white;
 	}
 	</style>
+	<script>
+	var n=1; 
+mybook = new Array()
+for(i=1;i<9;i++){
+mybook[i] = new Image()
+mybook[i].src = "nolan/"+i+".jpg";
+}
+
+function show(){
+document.book.src = mybook[n].src; 
+n++; 
+if(n>9){n=0;}
+timer=setTimeout("show()",1500);
+}
+
+function stop(){
+clearTimeout(timer);
+}
+	</script>
 </head>
 <body>
 	<div class="background">
@@ -111,23 +130,13 @@
 				</tr>
 			</tbody>
 		</table>
-		<table class="photo">
- 			<tbody>
- 				<tr>
- 					<td class="img-margin"><img src="nolan/1.jpg" width="200"></td>
- 					<td class="img-margin"><img src="nolan/2.jpg" width="200"></td>
- 					<td class="img-margin"><img src="nolan/3.jpg" width="200"></td>
- 					<td class="img-margin"><img src="nolan/4.jpg" width="200"></td>
- 				</tr>
- 				<tr>
- 					<td class="img-margin"><img src="nolan/5.jpg" width="200"></td>
- 					<td class="img-margin"><img src="nolan/6.jpg" width="200"></td>
- 					<td class="img-margin"><img src="nolan/7.jpg" width="200"></td>
- 					<td class="img-margin"><img src="nolan/8.jpg" width="200"></td>
- 				</tr>
-
- 			</tbody>
- 		</table>
+		<center class="photo">
+		<IMG SRC="nolan/1.jpg" NAME="book" BORDER="0">
+<FORM>
+<INPUT TYPE="button" VALUE="start" onclick="show()">
+<INPUT TYPE="button" VALUE="stop" onclick="stop()">
+</FORM>
+</center>
 	</div>
 </body>
 </html>

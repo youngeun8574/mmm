@@ -75,7 +75,7 @@ mybook[i].src = "nolan/"+i+".jpg";
 function show(){
 document.book.src = mybook[n].src; 
 n++; 
-if(n>9){n=0;}
+if(n>8){n=1;}
 timer=setTimeout("show()",1500);
 }
 

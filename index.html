@@ -5,84 +5,32 @@
 	<title>인터렉티브 디자인_9주차_문영은, 오인식</title>
 	<style>
 		*{margin: 0; padding: 0;}
-	body{
-			width: 960px; height: auto;
+	
+	@font-face {
+	font-family: Futura BT;
+	src: url("ENFUTUBK.eot");
+	src: local("FuturaBlack BT"), url("ENFUTUBK.woff") format("woff");
+	}
+
+		
+            @media screen and (max-width:960px){
+            	 body{
+			width: 640px; height: auto;
 			margin: 0 auto;
 			background-color: black;
 			
 		font-style: "NanumGothic", "Malgun Gothic", "Apple SD Neo Gothic", "AppleGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
 
-		@media screen and (max-width:360px){
-                .background{
-		width: 960px; height: 1500px;
-
-		background: url(인터스텔라_수정.jpg);
-		background-repeat: no-repeat;
-		background-size: 960px;
-	}
-		@font-face {
-	font-family: Futura BT;
-	src: url("ENFUTUBK.eot");
-	src: local("FuturaBlack BT"), url("ENFUTUBK.woff") format("woff");
-
-	}
-	.table-title{
-		margin: auto; padding: 120px 0px;
-		text-align: center;
-	}
-	.table-sub{
+            	 .background{
+		width: 640px; height: 900px;
 		margin: 0 auto;
-			text-align: center;
-			font-family: Futura BT;
-			color: gray;
-			font-size: 30px;
-	}
-	.td{
-		padding: 0 30px;
-	}
-	a{
-		text-decoration: none;
-		color: gray;
-	}
-
-	img{
-		margin: 15px;
-		width: 35px; height: 35px;
-	}
-	thead p{
-		margin: 5px;
-		color: gray;
-		font-family: Futura BT;
-	}
-	tbody p{
-		color: gray;
-		text-align: center;
-		font-size: 14px;
-	}
-	thead h1{
-		color: white;
-
-		font-size: 23px;
-		margin-bottom: 50px;
-
-	}
-            }
-            @media screen and (min-width: 361px) and (max-width:640px){
-               .background{
-		width: 640px; height: 1000px;
 
 		background: url(인터스텔라_수정.jpg);
 		background-repeat: no-repeat;
 		background-size: 640px;
 	}
-		@font-face {
-	font-family: Futura BT;
-	src: url("ENFUTUBK.eot");
-	src: local("FuturaBlack BT"), url("ENFUTUBK.woff") format("woff");
-
-	}
-	.table-title{
+		.table-title{
 		margin: auto; padding: 120px 0px;
 		text-align: center;
 	}
@@ -100,20 +48,19 @@
 		text-decoration: none;
 		color: gray;
 	}
-
 	img{
-		margin: 15px;
-		width: 35px; height: 35px;
+		margin: 8px;
+		width: 20px; height: 20px;
 	}
 	thead p{
 		margin: 5px;
 		color: gray;
 		font-family: Futura BT;
-	}
-	tbody p{
+}
+thead p{
+		margin: 5px;
 		color: gray;
-		text-align: center;
-		font-size: 14px;
+		font-family: Futura BT;
 	}
 	thead h1{
 		color: white;
@@ -123,7 +70,14 @@
 
 	}
             }
-            @media screen and (min-width: 641px){
+            @media screen and (min-width: 961px){
+                body{
+			width: 960px; height: auto;
+			margin: 0 auto;
+			background-color: black;
+			
+		font-style: "NanumGothic", "Malgun Gothic", "Apple SD Neo Gothic", "AppleGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
                 .background{
 		width: 960px; height: 1500px;
 
@@ -131,12 +85,7 @@
 		background-repeat: no-repeat;
 		background-size: 960px;
 	}
-		@font-face {
-	font-family: Futura BT;
-	src: url("ENFUTUBK.eot");
-	src: local("FuturaBlack BT"), url("ENFUTUBK.woff") format("woff");
-
-	}
+		
 	.table-title{
 		margin: auto; padding: 120px 0px;
 		text-align: center;
@@ -165,61 +114,15 @@
 		color: gray;
 		font-family: Futura BT;
 	}
-	tbody p{
-		color: gray;
-		text-align: center;
-		font-size: 14px;
-	}
-	thead h1{
-		color: white;
+	
 
-		font-size: 23px;
-		margin-bottom: 50px;
-
-	}
             } 
            
-          
-
+    </style>
 	
-	
-	</style>
-	<script>
-var ie=document.all?1:0
-var ns6=document.getElementById&&!document.all?1:0
-var ns4=document.layers?1:0
-var posleft=1
-var idoftrembleobject="trembletext"
-var trembleobject
-
-function starttremble() {
-    if (ie || ns4 || ns6) {
-        if (ie) {
-            trembleobject=eval("document.all."+idoftrembleobject+".style")
-        }
-        if (ns6) {
-            trembleobject=idoftrembleobject
-        }
-        
-            dotremble()
-    }
-}
-
-function dotremble() {
-    posleft*=-1
-    if (ie) {
-            trembleobject.posLeft+=posleft  
-    }
-    if (ns6) {
-            var newpos=parseInt(document.getElementById(trembleobject).style.left)+posleft
-        document.getElementById(trembleobject).style.left=newpos
-    }
-    var timer=setTimeout("dotremble()",20) // 숫자 20 을 조절해 보세요. 숫자가 커질수록 속도가 느려집니다
-}
-onload=starttremble
-</script>
 </head>
 <body>
+	
 	<div class="background">
 			<table class="table-title">
 			<thead>
@@ -244,9 +147,9 @@ onload=starttremble
 		<table class="table-sub">
 			<tbody>
 				<tr>
-					<td class="td" id="box" style="position:relative"><a href="4part.html">Director</a></td>
-					<td class="td" id="box" style="position:relative"><a href="1part.html">Actor</a></td>
-					<td class="td" id="box" style="position:relative"><a href="2part.html">Story</a></td>
+					<td class="td"><a href="4part.html">Director</a></td>
+					<td class="td"><a href="1part.html">Actor</a></td>
+					<td class="td"><a href="2part.html">Story</a></td>
 				</tr>
 			</tbody>
 		</table>
